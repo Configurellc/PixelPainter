@@ -1,11 +1,16 @@
 .swatch {
-  width: 50px;
+  width: 10%;
+  height: 0%;
  /* padding: 1px;*/
   /*padding-right: 4px;*/
  /* background-color: orange;*/
   border-collapse: collapse;
  /* border: 5px solid black;*/
  /*  border: 1px solid black;*/
+}
+
+#pixelPainter {
+  width: 90%;
 }
 
 .palletteColumns {
@@ -18,6 +23,17 @@
 
 }
 
+.palletteColumns:hover {
+  width: 60px;
+  color: white;
+
+}
+
+/*.palletteRows:hover {
+  color: white;
+
+}*/
+
 .palletteRows {
   padding: 1px;
   padding-right: 4px;
@@ -26,6 +42,19 @@
   border: 5px solid black;
   border: 1px solid black;
 
+
+}
+
+.grid {
+  float: right;
+  display: inline-block;
+  width: 88%;
+  padding: 1px;
+  padding-right: 4px;
+  background-color: orange;
+  border-collapse: collapse;
+  border: 5px solid black;
+  border: 1px solid bla
 }
 
 body {
