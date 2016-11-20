@@ -10,9 +10,17 @@ pixelPainter.appendChild(swatchTable);
 
 // //for row
   for (var i = 0; i < 15; i++) {
-    var tr = document.createElement('tr');
-    tr.className = "palletteRows";
-    tr.innerHTML = "testy";
-    swatchTable.appendChild(tr);    
+    var palletteTR = document.createElement('tr');
+    palletteTR.className = "palletteRows";
+    palletteTR.innerHTML = "#";
+    swatchTable.appendChild(palletteTR);
+
+    for (var j = 0; j < 5; j++){
+      var palletteTD = document.createElement('td');
+      palletteTD.className = "palletteColumns";
+      palletteTD.innerHTML = "#";
+     palletteTR.appendChild(palletteTD);
+
+    }
   }
 };

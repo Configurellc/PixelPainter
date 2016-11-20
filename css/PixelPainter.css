@@ -1,0 +1,9 @@
+.palletteTD {
+  padding: 20px;
+  border: 5px solid black;
+   border: 1px solid black;
+}
+
+body {
+  background-color: rgba(69, 127, 165, 1);
+}
