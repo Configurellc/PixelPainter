@@ -15,12 +15,24 @@ pixelPainter.appendChild(swatchTable);
     palletteTR.innerHTML = "#";
     swatchTable.appendChild(palletteTR);
 
+     palletteTR.addEventListener('click', function () {
+       alert('done');
+     });
+
     for (var j = 0; j < 5; j++){
       var palletteTD = document.createElement('td');
       palletteTD.className = "palletteColumns";
       palletteTD.innerHTML = "#";
      palletteTR.appendChild(palletteTD);
 
-    }
+     // palletteTD.addEventListener('click', function () {
+     //   alert('SHIT!!!!');
+     // });
+
+
+    };
   }
+
+
+
 };

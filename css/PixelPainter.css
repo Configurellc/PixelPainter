@@ -1,7 +1,31 @@
-.palletteTD {
-  padding: 20px;
+.swatch {
+  width: 50px;
+ /* padding: 1px;*/
+  /*padding-right: 4px;*/
+ /* background-color: orange;*/
+  border-collapse: collapse;
+ /* border: 5px solid black;*/
+ /*  border: 1px solid black;*/
+}
+
+.palletteColumns {
+  padding: 1px;
+  padding-right: 4px;
+  background-color: orange;
+  border-collapse: collapse;
   border: 5px solid black;
-   border: 1px solid black;
+  border: 1px solid black;
+
+}
+
+.palletteRows {
+  padding: 1px;
+  padding-right: 4px;
+  background-color: orange;
+  border-collapse: collapse;
+  border: 5px solid black;
+  border: 1px solid black;
+
 }
 
 body {
