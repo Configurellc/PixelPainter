@@ -1,14 +1,14 @@
-.swatch {
+/*.swatch {
   width: 10%;
   height: 0%;
  /* padding: 1px;*/
   /*padding-right: 4px;*/
- /* background-color: orange;*/
-  border-collapse: collapse;
+  /*background-color: orange;
+  border-collapse: collapse;*/
  /* border: 5px solid black;*/
- /*  border: 1px solid black;*/
-}
+ /*  border: 1px solid black;}*/
 
+/*
 #pixelPainter {
   width: 90%;
 }
@@ -34,7 +34,7 @@
 
 }*/
 
-.palletteRows {
+/*.palletteRows {
   padding: 1px;
   padding-right: 4px;
   background-color: orange;
@@ -59,4 +59,4 @@
 
 body {
   background-color: rgba(69, 127, 165, 1);
-}
+}*/
