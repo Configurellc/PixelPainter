@@ -67,9 +67,9 @@ var paletteArray = ["red","orange","yellow","green","blue","indigo","violet","gr
 
 function createPalette(){
   for (var i = 0; i < paletteArray.length; i++) {
-    var paletteChoices = pixelPainter.appendChild(document.createElement("div"));
+    var paletteChoices = pixelPainter.appendChild(document.createElement("table"));
     paletteChoices.className = "palette";
-    paletteChoices.style.backgroundColor = paletteArray(i);
+    paletteChoices.style.backgroundColor = paletteArray[i];
     paletteChoices.addEventListener("click", colorPicker());
   }
 }
