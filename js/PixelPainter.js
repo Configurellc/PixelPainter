@@ -1,22 +1,10 @@
 var paletteArray = ["red","orange","yellow","green","blue","indigo","violet","grey","black","white"];
 
 var painter = (function Painter(){
-console.log('sanity check - mother fucker');
+  console.log('sanity check - mother fucker');
 
 var setColor = "";
-// function document.createElement(name){
-//   return document.document.createElementement(name);
-// }
 
-
-
-// var swatchTable = document.createElement('div');
-// swatchTable.className = "swatch";
-// pixelPainter.appendChild(swatchTable);
-
-// var grid = document.createElement('div');
-// grid.className = "grid";
-// pixelPainter.appendChild(grid);
 
 var paletteArray = ["red","orange","yellow","green","blue","indigo","violet","grey","black"];
 
@@ -36,7 +24,7 @@ var canvas = document.createElement("div");
 function createPalette(){
   for (var i = 0; i < paletteArray.length; i++) {
     var row = document.createElement('div');
-    row.id = i;
+    row.id = "color" + [i];
     row.style.width = 20;
     row.style.height = 20;
     row.style.backgroundColor = paletteArray[i];
@@ -46,40 +34,25 @@ function createPalette(){
     paletteTable.appendChild(row);
   }
 }
+
 createPalette();
 
-    
 
    function createGrid(rows,columns){
 
-    //   for (var i = 1; i < 20; i++) {
-    //     var pixelTR = document.document.createElementement('tr');
-    //     pixelTR.className = "Rows";
-    //     pixelTR. = "";
-    //     grid.appendChild(pixelTR);
+    for (var i = 0; i < 20; i++) {
+      var gridRow = document.createElement("tr");
+      gridRow.id = "grid-Row";
+      canvas.appendChild(gridRow);
 
-    //     pixelTR.addEventListener('click', function(){
-    //      alert('done');
-    //     });
-
-    //      for (var j = 1; j < 20; j++){
-    //       var pixelTD = document.document.createElementement('td');
-    //       pixelTD.className = "Columns";
-    //       pixelTD.innerHTML = "#";
-    //       pixelTR.appendChild(pixelTD);
-    //       }
-    //   }
-    // }
-
-    
-
-    for (var i = 0; i < rows; i++) {
-      var tr = canvas.appendChild(document.createElement("tr"));
-       for (var j = 0; j < columns; j++) {
-          var cells = tr.appendChild(document.createElement("td"));
+       for (var j = 0; j < 20; j++) {
+          var cells = document.createElement("td");
+          cells.className = 'cells-class';
+          gridRow.appendChild(cells);
           cells.style.backgroundColor = "blue";
           cells.className = "pixels";
-          cells.innerHTML= "yep";
+          cells.style.width = 20;
+          cells.style.height = 20;
           cells.addEventListener("click", function(){
               this.style.backgroundColor = setColor;
               console.log(setColor);
@@ -89,36 +62,12 @@ createPalette();
         }
     }
 
+  createGrid();
 
-
-// function colorPicker(){
-
-//       var setColor = this.style.backgroundColor;
-//     }
-    
-// //for row
-  // for (var i = 0; i < 15; i++) {
-  //   var palletteTR = document.createElement('tr');
-  //   palletteTR.className = "palletteRows";
-  //   palletteTR.innerHTML = "#";
-  //   swatchTable.appendChild(palletteTR);
-
-  //    palletteTR.addEventListener('click', function () {
-  //      alert('done');
-  //    });
-  //   }
-
-  //   for (var j = 0; j < 5; j++){
-  //     var palletteTD = document.createElement('td');
-  //     palletteTD.className = "palletteColumns";
-  //     palletteTD.innerHTML = "#";
-  //    palletteTR.appendChild(palletteTD);
-  //  }
 return{
-  // colorPicker: colorPicker,
   createGrid: createGrid,
   createPalette: createPalette
 };
-      
-    
+
+
 })();

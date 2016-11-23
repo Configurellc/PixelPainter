@@ -8,12 +8,18 @@
  /* border: 5px solid black;*/
  /*  border: 1px solid black;}*/
 
-
+.grid{
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
 #pixelPainter {
   width: 90%;
 }
-.pixels{
+.pixel{
   border: 1px solid black;
+  width: 1%;
+  float: left;
 }
 
 .palletteColumns {
@@ -29,6 +35,13 @@
 .palletteColumns:hover {
   width: 60px;
   color: white;
+
+}
+
+.canvas{
+  width: 88%;
+  float: right;
+  height: 100%;
 
 }
 
