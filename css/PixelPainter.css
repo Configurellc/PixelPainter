@@ -8,9 +8,12 @@
  /* border: 5px solid black;*/
  /*  border: 1px solid black;}*/
 
-/*
+
 #pixelPainter {
   width: 90%;
+}
+.pixels{
+  border: 1px solid black;
 }
 
 .palletteColumns {
@@ -32,7 +35,7 @@
 /*.palletteRows:hover {
   color: white;
 
-}*/
+}
 
 /*.palletteRows {
   padding: 1px;

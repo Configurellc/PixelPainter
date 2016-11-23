@@ -1,14 +1,14 @@
+var paletteArray = ["red","orange","yellow","green","blue","indigo","violet","grey","black","white"];
+
 var painter = (function Painter(){
 console.log('sanity check - mother fucker');
 
+var setColor = "";
 // function document.createElement(name){
 //   return document.document.createElementement(name);
 // }
 
-function colorPicker(){
 
-      var setColor = this.style.backgroundColor;
-    }
 
 // var swatchTable = document.createElement('div');
 // swatchTable.className = "swatch";
@@ -18,9 +18,37 @@ function colorPicker(){
 // grid.className = "grid";
 // pixelPainter.appendChild(grid);
 
-var paletteArray = ["red","orange","yellow","green","blue","indigo","violet","grey","black","white"];
+var paletteArray = ["red","orange","yellow","green","blue","indigo","violet","grey","black"];
 
+var grid = document.createElement("table");
+    grid.className = "grid";
+    pixelPainter.appendChild(grid);
+    grid.style.backgroundColor = null;
 
+var paletteTable = document.createElement("table");
+    paletteTable.className = "pixel";
+    grid.appendChild(paletteTable);
+
+var canvas = document.createElement("div");
+    canvas.className = "canvas";
+    grid.appendChild(canvas);
+
+function createPalette(){
+  for (var i = 0; i < paletteArray.length; i++) {
+    var row = document.createElement('div');
+    row.id = i;
+    row.style.width = 20;
+    row.style.height = 20;
+    row.style.backgroundColor = paletteArray[i];
+    row.addEventListener("click", function(){
+    setColor = this.style.backgroundColor;
+    });
+    paletteTable.appendChild(row);
+  }
+}
+createPalette();
+
+    
 
    function createGrid(rows,columns){
 
@@ -43,36 +71,30 @@ var paletteArray = ["red","orange","yellow","green","blue","indigo","violet","gr
     //   }
     // }
 
-    var grid = document.createElement("table");
-    grid.className = "grid";
-    pixelPainter.appendChild(grid);
-    grid.style.backgroundColor = null;
-
+    
 
     for (var i = 0; i < rows; i++) {
-      var tr = grid.appendChild(document.createElement("tr"));
-      tr.innerHTML = "yep";
-        for (var j = 0; j < columns; j++) {
+      var tr = canvas.appendChild(document.createElement("tr"));
+       for (var j = 0; j < columns; j++) {
           var cells = tr.appendChild(document.createElement("td"));
           cells.style.backgroundColor = "blue";
           cells.className = "pixels";
           cells.innerHTML= "yep";
           cells.addEventListener("click", function(){
               this.style.backgroundColor = setColor;
+              console.log(setColor);
           });
 
           }
         }
     }
 
-function createPalette(){
-  for (var i = 0; i < paletteArray.length; i++) {
-    var paletteChoices = pixelPainter.appendChild(document.createElement("table"));
-    paletteChoices.className = "palette";
-    paletteChoices.style.backgroundColor = paletteArray[i];
-    paletteChoices.addEventListener("click", colorPicker());
-  }
-}
+
+
+// function colorPicker(){
+
+//       var setColor = this.style.backgroundColor;
+//     }
     
 // //for row
   // for (var i = 0; i < 15; i++) {
@@ -93,7 +115,7 @@ function createPalette(){
   //    palletteTR.appendChild(palletteTD);
   //  }
 return{
-  colorPicker: colorPicker,
+  // colorPicker: colorPicker,
   createGrid: createGrid,
   createPalette: createPalette
 };
