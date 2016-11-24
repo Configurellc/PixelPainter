@@ -65,6 +65,11 @@ createPalette();
               this.style.backgroundColor = setColor;
               console.log(setColor);
           });
+          cells.addEventListener("mouseover", function(){
+             if(event.buttons === 1){
+              this.style.backgroundColor = setColor;
+            }
+            });
 
           }
         }
