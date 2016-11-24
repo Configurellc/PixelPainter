@@ -49,7 +49,7 @@ createPalette();
           var cells = document.createElement("td");
           cells.className = 'cells-class';
           gridRow.appendChild(cells);
-          cells.style.backgroundColor = "blue";
+          cells.style.backgroundColor = "white";
           cells.className = "pixels";
           cells.style.width = 20;
           cells.style.height = 20;
