@@ -20,6 +20,7 @@
   border: 1px solid black;
   width: 1%;
   float: left;
+  cursor: pointer;
 }
 
 .palletteColumns {

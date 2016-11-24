@@ -71,6 +71,8 @@ createPalette();
             }
             });
 
+
+
           }
         }
     }
@@ -83,10 +85,32 @@ createPalette();
     }
   }
 
+  function erase() {
+    var remove = document.createElement('button');
+      remove.id = 'erase-pixels';
+      remove.innerHTML = "button";
+      pixelPainter.appendChild(remove);
+
+    remove.addEventListener('click', function() {
+      setColor = this.style.backgroundColor = 'white';
+    });
+
+    remove.addEventListener('mouseover', function() {
+      if(event.buttons ===1) {
+        this.style.backgroundColor = 'white';
+      }
+    })
+
+    remove.add
+
+  }
+    erase();
+
 return{
   createGrid: createGrid,
   createPalette: createPalette,
-  clearCanvas: clearCanvas
+  clearCanvas: clearCanvas,
+  erase: erase
 };
 
 
