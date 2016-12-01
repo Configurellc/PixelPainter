@@ -1,14 +1,30 @@
-var paletteArray = ["red","orange","yellow","green","blue","indigo","violet","grey","black","white"];
-
 var painter = (function Painter(){
   console.log('sanity check - mother fucker');
 
 var setColor = "";
 
-
 var paletteArray = ["red","orange","yellow","green","blue","indigo","violet","grey","black"];
 
-var grid = document.createElement("table");
+var titleArray = ["P","I","X","E","L", "Painter"];
+
+//Adding Title & Spans to HTML
+function createTitle(){
+
+var header = document.querySelector("h1");
+  header.id = "title";
+  header.innerHTML = "";
+
+for(var z = 0; z<titleArray.length; z++){
+  var spanElement = "span" + titleArray[z];
+  spanElement = document.createElement("span");
+    spanElement.id = titleArray[z].toString();
+    spanElement.innerHTML = titleArray[z].toString();
+    header.appendChild(spanElement);
+}
+}createTitle();
+
+
+var grid = document.createElement("div");
     grid.className = "grid";
     pixelPainter.appendChild(grid);
     grid.style.backgroundColor = null;
@@ -28,13 +44,14 @@ var clearButton = document.createElement("button");
     clearButton.addEventListener("click", function(){
       clearCanvas();
     });
+var titleFont = document.createElement("link");
 
     function createPalette(){
       for (var i = 0; i < paletteArray.length; i++) {
         var row = document.createElement('div');
         row.id = "color" + [i];
-        row.style.width = 20;
-        row.style.height = 20;
+        // row.style.width = 20;
+        // row.style.height = 20;
         row.style.backgroundColor = paletteArray[i];
         row.addEventListener("click", function(){
         setColor = this.style.backgroundColor;
@@ -99,14 +116,13 @@ createPalette();
       if(event.buttons ===1) {
         this.style.backgroundColor = 'white';
       }
-    })
-
-    remove.add
+    });
 
   }
     erase();
 
 return{
+  createTitle: createTitle,
   createGrid: createGrid,
   createPalette: createPalette,
   clearCanvas: clearCanvas,

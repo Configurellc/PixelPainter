@@ -1,31 +1,52 @@
-/*.swatch {
-  width: 10%;
-  height: 0%;
- /* padding: 1px;*/
-  /*padding-right: 4px;*/
-  /*background-color: orange;
-  border-collapse: collapse;*/
- /* border: 5px solid black;*/
- /*  border: 1px solid black;}*/
+@font-face{
+  font-family: "BMblock";
+  src: url(BMblock.TTF);
+}
 
+@font-face{
+  font-family: "Fipps-Regular";
+  src: url(Fipps-Regular.otf);
+}
 .grid{
   width: 100%;
   height: 100%;
   display: inline-block;
 }
 #pixelPainter {
-  width: 90%;
+  width: 80%;
 }
+
+//COLOR PALETTE SETINGS:
+
 .pixel{
-  border: 1px solid black;
-  width: 1%;
   float: left;
   cursor: pointer;
+  height: 370px;
+  width: 0px
+  display: inline-block;
 }
+
+#color0, #color1, #color2, #color3, #color4, #color5, #color6, #color7, #color8, #color9 {
+  border: 3px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+
+}
+
+#color0:hover, #color1:hover, #color2:hover, #color3:hover, #color4:hover, #color5:hover, #color6:hover, #color7:hover, #color8:hover {
+
+  border: 3px solid white;
+  width: 40px;
+  height: 40px;
+  box-shadow: 8px, 8px,;
+
+}
+
 
 .palletteColumns {
   padding: 1px;
-  padding-right: 4px;
+  padding-right: 1px;
   background-color: orange;
   border-collapse: collapse;
   border: 5px solid black;
@@ -40,29 +61,46 @@
 }
 
 .canvas{
-  width: 88%;
-  float: right;
+  /*width: 50%;*/
+  float: center;
   height: 100%;
+  display: inline-block;
 
 }
 
-/*.palletteRows:hover {
-  color: white;
+h1{
+  font-family: "Fipps-Regular";
+  font-size: 50px;
+  font-weight: .7;
+  -webkit-transition: all 0.75s ease;
+  -moz-transition: all 0.75s ease;
+  -o-transition: all 0.75s ease;
+  -ms-transition: all 0.75s ease;
+  transition: all 0.75s ease;
 
 }
-
-/*.palletteRows {
-  padding: 1px;
-  padding-right: 4px;
-  background-color: orange;
-  border-collapse: collapse;
-  border: 5px solid black;
-  border: 1px solid black;
-
-
+#P{
+  color: blue;
+}
+#I{
+  color: yellow;
+}
+#X{
+  color: orange;
+}
+#E{
+  color: green;
+}
+#L{
+  color: red;
+}
+#Painter{
+  font-family: "BMblock";
+  color: black;
+  padding: 10px;
 }
 
-.grid {
+/*.grid {
   float: right;
   display: inline-block;
   width: 88%;
@@ -76,4 +114,5 @@
 */
 body {
   background-color: rgba(69, 127, 165, 1);
+
 }
